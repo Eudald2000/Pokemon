@@ -1,21 +1,31 @@
-import "./App.css";
+import { useState } from 'react'
+import './App.css'
+import { Buscador } from './components/buscador'
+import { Pokemon } from './components/PokemonCard'
+import withResults from './mooks/one-result.json'
 
-function App() {
+function App () {
+  const [pokemon, setPokemon] = useState(null)
+
+  // Simula búsqueda: siempre devuelve withResults
+  const handleSearch = (searchValue) => {
+    // Aquí podrías hacer fetch en el futuro
+    setPokemon(withResults)
+  }
+
+  // Extrae datos solo si hay resultado
+  const name = pokemon?.forms?.[0]?.name
+  const foto = pokemon?.sprites?.other?.home?.front_default
+
   return (
-    <div className="container py-4">
-      <nav className="navbar navbar-dark bg-primary mb-4 rounded">
-        <span className="navbar-brand mb-0 h1">Poké Explorer</span>
-      </nav>
+    <>
+      <Buscador onSearch={handleSearch} />
 
-      <div className="text-center">
-        <h1 className="mb-3">¡Bienvenido, Entrenador!</h1>
-        <p className="lead">
-          Busca tus Pokémon favoritos, consulta sus habilidades y crea tu equipo ideal.
-        </p>
-        <button className="btn btn-success mt-3">¡Atrapa ese Pokémon!</button>
-      </div>
-    </div>
-  );
+      <main>
+        <Pokemon pokemon={pokemon} name={name} foto={foto}/>
+      </main>
+    </>
+  )
 }
 
-export default App;
+export default App
