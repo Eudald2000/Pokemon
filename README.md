@@ -1,49 +1,36 @@
-Crea una aplicación para buscar películas
-
-API a usar: - https://www.omdbapi.com/ Consigue la API Key en la propia página web registrando tu email.
-
-Requerimientos:
-
-- Necesita mostrar un input para buscar la película y un botón para buscar.
-
-- Lista las películas y muestra el título, año y poster.
-
-- Que el formulario funcione
-
-- Haz que las películas se muestren en un grid responsive.
-
-- Hacer el fetching de datos a la API
-
-Primera iteración:
-
-- Evitar que se haga la misma búsqueda dos veces seguidas.
-
-- Haz que la búsqueda se haga automáticamente al escribir.
-
-- Evita que se haga la búsqueda continuamente al escribir (debounce)
+# PRUEBA TECNICA DE FETCH
 
 ---
 
-Crea una aplicación para buscar Pokémon
+## 🕹️ Aplicación para Buscar Pokémon
 
-API a usar: - https://pokeapi.co/
+**API:** [PokeAPI](https://pokeapi.co/)
 
-Requerimientos:
+### Requerimientos
 
-- Necesita mostrar un input para buscar el nombre de un Pokémon y un botón para buscar.
+- Mostrar un input para buscar el nombre de un Pokémon y un botón para buscar.
+- Listar los Pokémon encontrados mostrando:
+  - Nombre
+  - Número (ID)
+  - Imagen
+- El formulario debe funcionar correctamente.
+- Los Pokémon deben mostrarse en un grid responsive.
+- Fetching de datos desde la API.
 
-- Lista los Pokémon encontrados y muestra el nombre, número (ID) y una imagen.
+#### Primera iteración
 
-- Que el formulario funcione correctamente.
+- Evitar búsquedas duplicadas consecutivas.
+- Búsqueda automática al escribir.
+- Evitar búsquedas continuas al escribir (debounce).
 
-- Haz que los Pokémon se muestren en un grid responsive.
+---
 
-- Hacer el fetching de datos a la API.
+## 📝 Resultados de las Prácticas
 
-Primera iteración:
+### Primer intento
 
-- Evitar que se haga la misma búsqueda dos veces seguidas.
-
-- Haz que la búsqueda se haga automáticamente al escribir.
-
-- Evita que se haga la búsqueda continuamente al escribir (debounce).
+- **Tiempo total:** 1 hora, 25 minutos.
+- **Ayudas:**  
+  - Estructura del fetch  
+  - Un poco al intentar utilizar el formulario  
+  - Mucha ayuda con la búsqueda automática y el debounce
