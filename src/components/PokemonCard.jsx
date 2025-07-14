@@ -1,4 +1,4 @@
-const PokemonCard = ({ name, foto }) => {
+const PokemonCard = ({ }) => {
   return (
     <div className="container-inner">
       <div className="card card-pokemon card-fire">
